@@ -6,8 +6,14 @@
 using std::vector;
 typedef enum { kRed, kWhite, kBlue } Color;
 
+// First Attempt at DutchFlagPartition sort
+// GOAL: All elements less than A[i] appear first, followed by
+// all elements equal, then greater
 void DutchFlagPartition(int pivot_index, vector<Color>* A_ptr) {
-  // TODO - you fill in here.
+  vector<Color> A = *A_ptr;
+  for ( int i = 0, e = A.size(); i < e; ++i ) {
+    if ( A[i] < pivot_index)
+  }
   return;
 }
 void DutchFlagPartitionWrapper(TimedExecutor& executor, const vector<int>& A,
